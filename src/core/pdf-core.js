@@ -124,13 +124,14 @@ async function scrollPage(page) {
 
     return new Promise((resolve, reject) => {
       function scrollDown() {
+        logger.info('Scrolling by ' + scrollStep);
         window.scrollBy(0, scrollStep);
-
-        // if (document.body.scrollHeight - bottomPos() < bottomThreshold) {
-        //  window.scrollTo(0, 0);
-        //  setTimeout(resolve, 500);
-        //  return;
-        // }
+        logger.info('Scrolled');
+        if (document.body.scrollHeight - bottomPos() < bottomThreshold) {
+          // window.scrollTo(0, 0);
+          setTimeout(resolve, 500);
+          return;
+        }
 
         setTimeout(scrollDown, scrollInterval);
       }
