@@ -80,7 +80,9 @@ async function render(_opts = {}) {
       await scrollPage(page);
       await scrollPage(page);
       await scrollPage(page);
+      logger.info('Scroll page ...');
       await scrollPage(page);
+      logger.info('Scroll page ....');
       await scrollPage(page);
     }
 
