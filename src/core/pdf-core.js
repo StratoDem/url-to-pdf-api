@@ -78,6 +78,10 @@ async function render(_opts = {}) {
     if (opts.scrollPage) {
       logger.info('Scroll page ..');
       await scrollPage(page);
+      await scrollPage(page);
+      await scrollPage(page);
+      await scrollPage(page);
+      await scrollPage(page);
     }
 
     logger.info('Render PDF ..');
@@ -130,10 +134,6 @@ async function scrollPage(page) {
       }
 
       setTimeout(reject, 30000);
-      scrollDown();
-      scrollDown();
-      scrollDown();
-      scrollDown();
       scrollDown();
     });
   });
