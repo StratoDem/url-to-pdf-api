@@ -114,7 +114,7 @@ async function render(_opts = {}) {
 async function scrollPage(page) {
   // Scroll to page end to trigger lazy loading elements
   await page.evaluate(() => {
-    const scrollInterval = 100;
+    const scrollInterval = 1000;
     const scrollStep = Math.floor(window.innerHeight / 2);
     const bottomThreshold = 400;
 
