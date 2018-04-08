@@ -131,6 +131,10 @@ async function scrollPage(page) {
 
       setTimeout(reject, 30000);
       scrollDown();
+      scrollDown();
+      scrollDown();
+      scrollDown();
+      scrollDown();
     });
   });
 }
