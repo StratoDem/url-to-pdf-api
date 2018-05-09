@@ -7,6 +7,7 @@ async function render(_opts = {}) {
   const opts = _.merge({
     cookies: [],
     scrollPage: false,
+    numPageScrolls: 15,
     emulateScreenMedia: true,
     ignoreHttpsErrors: false,
     html: null,
@@ -77,7 +78,7 @@ async function render(_opts = {}) {
 
     if (opts.scrollPage) {
       logger.info('Scroll page ..');
-      for (var i = 0; i < 15; i++) {
+      for (var i = 0; i < opts.numPageScrolls; i++) {
         logger.info('Scroll page ...');
         await scrollPage(page);
       }      

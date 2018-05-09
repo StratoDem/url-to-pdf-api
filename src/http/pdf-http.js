@@ -49,6 +49,7 @@ function getOptsFromQuery(query) {
     cookies: query.cookies,
     attachmentName: query.attachmentName,
     scrollPage: query.scrollPage,
+    numPageScrolls: query.numPageScrolls,
     emulateScreenMedia: query.emulateScreenMedia,
     ignoreHttpsErrors: query.ignoreHttpsErrors,
     waitFor: query.waitFor,
